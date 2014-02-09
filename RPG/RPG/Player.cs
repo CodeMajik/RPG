@@ -20,7 +20,7 @@ namespace RPG
         {
             if (mAlive)
             {
-                if (k.IsKeyDown(Keys.W))
+                /*if (k.IsKeyDown(Keys.W))
                     if (Position.Y > Constants.MIN_Y)
                         Velocity = new Vector2(Velocity.X, -Constants.PLAYER_MOVEMENT_SPEED);
                 if (k.IsKeyDown(Keys.A))
@@ -32,10 +32,22 @@ namespace RPG
                 if (k.IsKeyDown(Keys.D))
                     if (Position.X < Constants.MAX_X)
                         Velocity = new Vector2(Constants.PLAYER_MOVEMENT_SPEED, Velocity.Y);
-
+                */
+                if (k.IsKeyDown(Keys.W))
+                    if (Position.Y > Constants.MIN_Y)
+                        Constants.mCamera.scroll(Camera_Emulator.DIRECTION.UP);
+                if (k.IsKeyDown(Keys.A))
+                    if (Position.X > Constants.MIN_X)
+                        Constants.mCamera.scroll(Camera_Emulator.DIRECTION.LEFT);
+                if (k.IsKeyDown(Keys.S))
+                    if (Position.Y < Constants.MAX_Y)
+                        Constants.mCamera.scroll(Camera_Emulator.DIRECTION.DOWN);
+                if (k.IsKeyDown(Keys.D))
+                    if (Position.X < Constants.MAX_X)
+                        Constants.mCamera.scroll(Camera_Emulator.DIRECTION.RIGHT);
                 if (k.IsKeyDown(Keys.Space))
                 { //shoot 
-                    
+                    this.destroy();
                 }
             }
         }
@@ -53,7 +65,7 @@ namespace RPG
             if (mAlive)
             {
                 Constants.mAnimationManager.addAnimation(
-                    new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>("explosion2"), 1, 16, 60), mPosition)
+                    new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>(".\\art\\explosion2"), 1, 16, 60), mPosition)
                     );
                 Constants.LIVES_LEFT--;
                 mAlive = false;
@@ -64,8 +76,8 @@ namespace RPG
             }
             else
             {
-                Constants.GAME_OVER = true;
-                Constants.mScreenStack.push(Constants.mEndScreenLose);
+                //Constants.GAME_OVER = true;
+                //Constants.mScreenStack.push(Constants.mEndScreenLose);
             }
         }
 

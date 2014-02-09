@@ -47,7 +47,7 @@ namespace RPG
         void startGame()
         {
             Constants.mMenuScreen.destroy();
-            Constants.mScreenStack.Screens.Clear();
+            Constants.mScreenStack.pop();
             Constants.mScreenStack.push(Constants.mMainGameScreen);
         }
 

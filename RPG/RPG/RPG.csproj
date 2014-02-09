@@ -113,6 +113,7 @@
     <Compile Include="Animation.cs" />
     <Compile Include="AnimationManager.cs" />
     <Compile Include="Button.cs" />
+    <Compile Include="Camera_Emulator.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="GameEntity.cs" />
     <Compile Include="GameScreen.cs" />

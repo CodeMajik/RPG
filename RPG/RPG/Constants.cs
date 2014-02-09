@@ -34,6 +34,7 @@ namespace RPG
         public static GameScreen mMainGameScreen;
         public static MenuScreen mMenuScreen;
         public static SplashScreen mSplashScreen, mEndScreenLose, mEndScreenWin;
+        public static Camera_Emulator mCamera;
         public static string pauseString;
 
         public static void init(ref GraphicsDeviceManager g, ref SpriteBatch s, ContentManager c)
@@ -41,10 +42,10 @@ namespace RPG
             sb = s;
             content = c;
             graphics = g;
-            DEFAULT_POSITION = new Vector2((float)(graphics.PreferredBackBufferWidth / 2)-32, (float)graphics.PreferredBackBufferHeight-100.0f );
+            DEFAULT_POSITION = new Vector2((float)(graphics.PreferredBackBufferWidth / 2)-8.0f, (float)(graphics.PreferredBackBufferHeight/2)-8.0f );
             DEFAULT_PROJECTILE_VELOCITY = new Vector2(0.0f, -25.0f);
             mAnimationManager = new AnimationManager(ref sb);
-            
+            mCamera = new Camera_Emulator(1f);
             mUiManager = new UIManager("MyFont", ref sb);
             mScreenStack = new ScreenStack();
             pauseString = "PAUSED";

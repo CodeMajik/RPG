@@ -53,9 +53,8 @@ namespace RPG
             clouds.Add(new TextureMap(Constants.content.Load<Texture2D>(".\\art\\cloud3"), 1, 1, true));
 
             radioPos = new Vector2(370.0f, 47.0f);
-            Constants.mAnimationManager.addAnimation(
-                   new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>(".\\art\\music_anim"), 1, 5, 600), radioPos)
-                   );
+            radio = new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>(".\\art\\music_anim"), 1, 5, 600), radioPos);
+            Constants.mAnimationManager.addAnimation(radio);
             
 
             DrawableEntities = new List<GameEntity>();
@@ -94,8 +93,8 @@ namespace RPG
             clouds.Add(new TextureMap(Constants.content.Load<Texture2D>(".\\art\\cloud3"), 1, 1, true));
 
             radioPos = new Vector2(374.0f, 58.0f);
-            Constants.mAnimationManager.addAnimation(
-                   new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>(".\\art\\music_anim"), 1, 5, 120, true), radioPos));
+            radio = new Animation(new AnimatedSprite(Constants.content.Load<Texture2D>(".\\art\\music_anim"), 1, 5, 600), radioPos);
+            Constants.mAnimationManager.addAnimation(radio);
 
             DrawableEntities = new List<GameEntity>();
             _Menu = new Menu(ref sb);

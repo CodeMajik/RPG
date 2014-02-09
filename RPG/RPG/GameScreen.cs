@@ -28,7 +28,8 @@ namespace RPG
             DrawableEntities = new List<GameEntity>();
             foreach (string bg in bgNames)
             {
-                Backgrounds.Add(new TextureMap(Constants.content.Load<Texture2D>(".\\art\\" + bg), 1, 1));
+                DrawableEntities.Add(new GameEntity(Vector2.Zero, Vector2.Zero, 
+                    new TextureMap(Constants.content.Load<Texture2D>(".\\art\\" + bg), 1, 1), GameEntity.ENTITY_TYPE.AI));
             }
 
             enemyMap = eMap;
@@ -42,6 +43,10 @@ namespace RPG
 
         public override void draw()
         {
+            foreach (GameEntity entity in DrawableEntities)
+            {
+                entity.draw();
+            }
             Player1.draw();
             Constants.mAnimationManager.draw();
         }
@@ -86,6 +91,10 @@ namespace RPG
             {
                 Constants.paused ^= Convert.ToBoolean(1);
                 pressedPause = false;
+            }
+            if (k.IsKeyDown(Keys.R))
+            {
+               
             }
         }
     }

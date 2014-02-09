@@ -29,7 +29,7 @@ namespace RPG
             {
                 Animations.ElementAt(i).Sprite.Update();
                 if (Animations.ElementAt(i).Sprite.Done)
-                    removeAnimation(Animations.ElementAt(i));
+                    removeAnimation(Animations[i]);
             }
         }
 
