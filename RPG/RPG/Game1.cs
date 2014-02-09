@@ -47,6 +47,7 @@ namespace RPG
         void startGame()
         {
             Constants.mMenuScreen.destroy();
+            Constants.mScreenStack.Screens.Clear();
             Constants.mScreenStack.push(Constants.mMainGameScreen);
         }
 
@@ -71,7 +72,7 @@ namespace RPG
             Constants.player = new Player(Constants.DEFAULT_POSITION, plrMap);
 
             Constants.mMainGameScreen = new GameScreen(ref spriteBatch, ref Constants.player, enemyMap, "grass");
-            Constants.mSplashScreen = new SplashScreen(".\\art\\splashscreen1", ref spriteBatch);
+            Constants.mSplashScreen = new SplashScreen(".\\art\\opening_splashscreen", ref spriteBatch);
             //Constants.mEndScreenLose = new SplashScreen("splashscreen3", ref spriteBatch, "Press Escape To Exit");
             //Constants.mEndScreenWin = new SplashScreen("splashscreen2", ref spriteBatch, "Press Escape To Exit");
 

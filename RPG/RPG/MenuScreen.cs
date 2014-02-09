@@ -144,10 +144,17 @@ namespace RPG
             {
                 fixed (int* ptr = &Constants.LIVES_LEFT)
                 {
-                    Constants.mUiManager.addString(new UIElement("Score: ", *ptr));
+                    Constants.mUiManager.addString(new UIElement("Lives: ", *ptr));
                     Constants.mUiManager.Display.Last().ptr = ptr;
                 }
-            } 
+            }
+            Constants.mAnimationManager.removeAnimation(radio);
+            Backgrounds.Clear();
+            fish.Clear();
+            clouds.Clear();
+            fishVel.Clear(); 
+            fishPos.Clear();
+            cloudPos.Clear();
         }
 
         public override void addEntity(GameEntity e)
