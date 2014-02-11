@@ -15,6 +15,12 @@ namespace RPG
         public int currentFrame, totalFrames, width, height;
         Rectangle sourceRectangle, destinationRectangle;
         public bool Flipped { get; set; }
+
+        public TextureMap()
+        {
+
+        }
+
         public TextureMap(Texture2D texture, int rows, int columns)
         {
             Texture = texture;

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG", "RPG\RPG\RPG.csproj", "{995AF903-83E9-4550-A6A7-5F4977792FE5}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "RPGContent", "RPG\RPGContent\RPGContent.contentproj", "{22EC4F3D-7665-4908-B533-4790BD131410}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGContent", "RPG\RPGContent\RPGContent.contentproj", "{22EC4F3D-7665-4908-B533-4790BD131410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapBuilder", "MapBuilder\MapBuilder\MapBuilder.csproj", "{7FB31430-652D-4384-9151-9C8CCC4F94C1}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "MapBuilderContent", "MapBuilder\MapBuilderContent\MapBuilderContent.contentproj", "{6BAE417F-665A-43D6-B172-F6C98F35B919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,12 @@ Global
 		{995AF903-83E9-4550-A6A7-5F4977792FE5}.Release|x86.Build.0 = Release|x86
 		{22EC4F3D-7665-4908-B533-4790BD131410}.Debug|x86.ActiveCfg = Debug|x86
 		{22EC4F3D-7665-4908-B533-4790BD131410}.Release|x86.ActiveCfg = Release|x86
+		{7FB31430-652D-4384-9151-9C8CCC4F94C1}.Debug|x86.ActiveCfg = Debug|x86
+		{7FB31430-652D-4384-9151-9C8CCC4F94C1}.Debug|x86.Build.0 = Debug|x86
+		{7FB31430-652D-4384-9151-9C8CCC4F94C1}.Release|x86.ActiveCfg = Release|x86
+		{7FB31430-652D-4384-9151-9C8CCC4F94C1}.Release|x86.Build.0 = Release|x86
+		{6BAE417F-665A-43D6-B172-F6C98F35B919}.Debug|x86.ActiveCfg = Debug|x86
+		{6BAE417F-665A-43D6-B172-F6C98F35B919}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

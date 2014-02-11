@@ -24,6 +24,11 @@ namespace RPG
         public enum ENTITY_TYPE { PLAYER, AI, PROJECTILE };
         protected ENTITY_TYPE mType;
 
+        public GameEntity()
+        {
+
+        }
+
         public GameEntity(Vector2 position, TextureMap map, ENTITY_TYPE type)
         {
             mPosition = position;
